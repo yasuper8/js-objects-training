@@ -31,3 +31,24 @@
 */
 
 // YOUR CODE HERE
+
+function letterCount(str) {
+  var strArr = str.split('');
+  var output = {};
+  var letterCount = 0;
+  strArr.forEach(function(letter) {
+    if (output[letter]) {
+      output[letter] += 1;
+    } else {
+      output[letter] = 1;
+    }
+  })
+  return output;
+}
+
+
+strArr.forEach(function(letter) {
+  var letterCount = 0;
+
+  output.letter = letter;
+})

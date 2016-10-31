@@ -32,5 +32,42 @@
   - To make your output more relevant, can you sort by days remaining (ascending)?
 
 */
+1478764800000
+
 
 // YOUR CODE HERE
+
+var testArr = [
+    {
+      name: "Jack",
+      dob: "10/31/2013"
+    },
+    {
+      name: "Jill",
+      dob: "4/01/1975"
+    }
+  ];
+
+  //((milliseconds / (1000*60*60*24)) % 7) from Stackoverflow
+function convertMillSecToDays(millSec){
+  return millSec / (1000*60*60*24)
+}
+
+function daysUntilDate(strDate) {
+  var todayInMillSec = Date.now();
+  var targerDate = Date.parse(strDate);
+  var millSecUntil = targerDate - todayInMillSec;
+  return Math.floor(convertMillSecToDays(millSecUntil));
+}
+
+
+function birthdayReminder(arr) {
+  var messages = [];
+  for(var i = 0; i < arr.length; i++) {
+    var birthday = daysUntilDate(arr[i].dob)
+    console.log(arr[i].dob);
+    messages.push(arr[i].name + "'s birthday id in " + birthday + " days")
+  }
+  console.log(messages);
+  return messages;
+}
