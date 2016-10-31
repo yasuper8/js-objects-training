@@ -46,9 +46,17 @@ function letterCount(str) {
   return output;
 }
 
-
-strArr.forEach(function(letter) {
+// returns percents
+function letterCount(str) {
+  var strArr = str.split('');
+  var output = {};
   var letterCount = 0;
-
-  output.letter = letter;
-})
+  strArr.forEach(function(letter) {
+    if (output[letter]) {
+      output[letter] += 1/strArr.length;
+    } else {
+      output[letter] = 1/strArr.length;
+    }
+  })
+  return output;
+}
