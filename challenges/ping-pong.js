@@ -38,3 +38,44 @@
 */
 
 // YOUR CODE HERE
+
+var totalCount = 0;
+
+
+function pingPong(arr) {
+  arr.forEach(fucntion(element, index, arr) {
+    if(typeof element === 'object') {
+      arr.pop()
+    }
+  })
+}
+
+function pingPong(arr) {
+  var objLocIndex;
+  for (var i = 0; i < array.length; i++) {
+    if(typeof arr[i] === 'object') {
+      objLocIndex = i;
+    }
+  }
+  if(objLocIndex === 0) {
+    arr.pop();
+    arr.unshift(null);
+  }
+
+}
+
+
+
+
+function pingPong(arr) {
+  // for (var i = 0; i > arr.length; i++) {
+  //
+  // }
+
+
+  if(typeof arr[arr.length - 1] !== "objects"){
+    arr.pop();
+    arr.unshift(null);
+  }
+  if(typeof arr)
+}

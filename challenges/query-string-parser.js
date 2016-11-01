@@ -45,3 +45,18 @@
 */
 
 // YOUR CODE HERE
+
+function parseQueryString(queryStr) {
+  var outputObj = {};
+  var keysAndValuesArr = queryStr.split("&");
+  keysAndValuesArr.forEach(function(element) {
+
+    var keyValuePair = element.split('=');
+
+    var keyValue = keyValuePair[0];
+
+    var value = keyValuePair[1];
+    outputObj[keyValue] = value;
+  });
+  return outputObj;
+}
